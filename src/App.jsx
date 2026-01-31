@@ -3,7 +3,12 @@ import { io } from "socket.io-client";
 import Editor from "@monaco-editor/react";
 import "./App.css";
 
-const socket = io("https://YOUR-BACKEND-NAME.onrender.com");
+const socket = io(
+  "https://codesync-backend-4d0h.onrender.com",
+  {
+    transports: ["websocket"],
+  }
+);
 
 
 /* ================= HELPERS ================= */
